@@ -52,22 +52,20 @@ include_once('includes/header.php');
                 </tr>
             </thead>
             <tbody>
+                <?php                
+                require_once('classes/livro.class.php');
+                $livro = new livro();
+                $livro->selectAll($livro);
+                while($res = $livro->returnDates()):
+                ?>
                 <tr>
-                    <td>A mão que salva</td>
-                    <td>PHP</td>
-                    <td>05/02/2020</td>
+                    <td><?php echo $res->nome_livro?></td>                    
+                    <td><?php echo $res->nacionalidade?></td>
+                    <td><?php echo $res->ano_criacao?></td>
                     <td><button type= "button" class="btn btn-dark">Editar</a></span></button></td>
                     <td><button type= "button" class="btn btn-dark">Excluir</td>
                 </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>A mão que salva</td>
-                    <td>PHP</td>
-                    <td>05/02/2020</td>
-                    <td><button type= "button" class="btn btn-dark">Editar</button></td>
-                    <td><button type= "button" class="btn btn-dark">excluir</td>
-                </tr>
+                <?php endwhile;?>
             </tbody>
         </table>
         <br>
