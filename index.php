@@ -72,7 +72,7 @@ include_once('includes/header.php');
         </table>
         <br>
         <div class="col-6 col-md-4 col-lg-6 .offset-6">
-            <button type= "button" class="btn btn-primary">Adicionar Livro</button>                
+        <a href="adicionarLivro.php"><button type="button" class="btn btn-primary">Adicionar Livro</button></a>
         </div>    
     </div>
 </div>

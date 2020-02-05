@@ -5,7 +5,7 @@
     $livro = new livro();
     $con = new conexao();
    
-    if(isset($_POST['btn-cadastrar'])):
+    if(isset($_POST['cadastrar'])):
         $nome_livro = mysqli_escape_string($con->conection,$_POST['nome_livro']);
         $nacionalidade = mysqli_escape_string($con->connection,$_POST['nacionalidade']);
         $ano_criacao = mysqli_escape_string($con->connection,$_POST['ano_criacao']);

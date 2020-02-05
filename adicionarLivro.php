@@ -43,38 +43,43 @@ include_once('includes/header.php');
 <br>
 <!-- container -->
 <div class="container">
-    <form action="php_action/create.php" method="POST" name="formulario">
-        
+    <form action="php_action/create.php" method="POST">
+
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <label> Nome do Livro</label>
-                <input type="text" name="nome_livro" class="form-control " placeholder="Nome do Livro" id="nome_livro">
+                <label for="nome_livro"> Nome do Livro</label>
+                <input type="text" name="nome_livro" id="nome_livro" class="form-control " placeholder="Nome do Livro">
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <label for="sel1">Nacionalidade:</label>
-                <select class="form-control" id="nacionalidade">
-                    <option>Brasileira</option>
-                    <option>Inglesa</option>
-                    <option>Francesa</option>
-                    <option>Russa</option>
+                <label for="nacionalidade">Nacionalidade:</label>
+                <select class="form-control" name="nacionalidade" id="nacionalidade">
+                    <option name="nacionalidade" id="nacionalidade">Brasileira</option>
+                    <option name="nacionalidade" id="nacionalidade" >Inglesa</option>
+                    <option name="nacionalidade" id="nacionalidade">Francesa</option>
+                    <option name="nacionalidade" id="nacionalidade">Russa</option>
                 </select>
             </div>
         </div>
 
 
         <div class="form-group">
-        <div class="col-md-6 offset-md-3">
-                <label>Data Criacao:</label>
-                <input type='text' id="ano_criacao" data-date-format="YYYY-MM-DD" name="ano_criacao" class="form-control" />
+            <div class="col-md-6 offset-md-3 col-lg-6">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name="ano_criacao" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
             </div>
         </div>
-
-
-
-        <button type="submit" style="width: 100%" class="btn btn-primary" name="btn-cadastrar">Cadastrar</button>
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3">
+                <button type="submit" style="width: 100%" class="btn btn-primary" name="cadastrar" id="cadastrar">Cadastrar</button>
+            </div>
+        </div>
 </div>
 </form>
 </div>
