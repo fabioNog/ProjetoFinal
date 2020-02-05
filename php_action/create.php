@@ -6,13 +6,13 @@
     $con = new conexao();
    
     if(isset($_POST['cadastrar'])):
-        $nome_livro = mysqli_escape_string($con->conection,$_POST['nome_livro']);
-        $nacionalidade = mysqli_escape_string($con->connection,$_POST['nacionalidade']);
-        $ano_criacao = mysqli_escape_string($con->connection,$_POST['ano_criacao']);
+        $liv_nome = mysqli_escape_string($con->conection,$_POST['liv_nome']);
+        $liv_lingua = mysqli_escape_string($con->connection,$_POST['liv_lingua']);
+        $liv_ano = mysqli_escape_string($con->connection,$_POST['liv_ano']);
         
-        $livro->setValue('nome_livro',$nome_livro);
-        $livro->setValue('nacionalidade',$nacionalidade);
-        $livro->setValue('ano_criacao',$ano_criacao);
+        $livro->setValue('liv_nome',$liv_nome);
+        $livro->setValue('liv_lingua',$liv_lingua);
+        $livro->setValue('liv_ano',$liv_ano);
         
         $sql = $livro->insert($livro);
         if(mysqli_query($con->conection,$sql)):
