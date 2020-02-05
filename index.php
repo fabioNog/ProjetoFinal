@@ -1,5 +1,6 @@
 <?php
 include_once('includes/header.php');
+require_once('classes/livro.class.php');
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.php">Livraria SOITIC</a>
@@ -43,7 +44,7 @@ include_once('includes/header.php');
 <!-- container -->
 <div class="container">
     <div class="row">
-        <table class="table text-center">
+        <table class="table">
             <thead>
                 <tr>
                     <th>Nome do Livro</th>
@@ -52,8 +53,7 @@ include_once('includes/header.php');
                 </tr>
             </thead>
             <tbody>
-                <?php                
-                require_once('classes/livro.class.php');
+                <?php                                
                 $livro = new livro();
                 $livro->selectAll($livro);
                 while($res = $livro->returnDates()):
@@ -69,9 +69,8 @@ include_once('includes/header.php');
             </tbody>
         </table>
         <br>
-        <div class="col-6 col-md-4 col-lg-6 .offset-6">
+
         <a href="adicionarLivro.php"><button type="button" class="btn btn-primary">Adicionar Livro</button></a>
-        </div>    
     </div>
 </div>
     <?php
