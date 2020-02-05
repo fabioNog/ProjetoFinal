@@ -59,9 +59,9 @@ require_once('classes/livro.class.php');
                 while($res = $livro->returnDates()):
                 ?>
                 <tr>
-                    <td><?php echo $res->nome_livro?></td>                    
-                    <td><?php echo $res->nacionalidade?></td>
-                    <td><?php echo $res->ano_criacao?></td>
+                    <td><?php echo $res->liv_nome?></td>                    
+                    <td><?php echo $res->liv_lingua?></td>
+                    <td><?php echo $res->liv_ano?></td>
                     <td><button type= "button" class="btn btn-dark">Editar</a></span></button></td>
                     <td><button type= "button" class="btn btn-dark">Excluir</td>
                 </tr>
