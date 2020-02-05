@@ -36,46 +36,49 @@ include_once('includes/header.php');
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
-
         </ul>
     </div>
 </nav>
+<br>
+<br>
 <!-- container -->
 <div class="container">
-    <div class="row">
-        <table class="table text-center">
-            <thead>
-                <tr>
-                    <th>Nome do Livro</th>
-                    <th>Nacionalidade</th>
-                    <th>Ano de Publicação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>A mão que salva</td>
-                    <td>PHP</td>
-                    <td>05/02/2020</td>
-                    <td><button type= "button" class="btn btn-dark">Editar</a></span></button></td>
-                    <td><button type= "button" class="btn btn-dark">Excluir</td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>A mão que salva</td>
-                    <td>PHP</td>
-                    <td>05/02/2020</td>
-                    <td><button type= "button" class="btn btn-dark">Editar</button></td>
-                    <td><button type= "button" class="btn btn-dark">excluir</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <div class="col-6 col-md-4 col-lg-6 .offset-6">
-            <button type= "button" class="btn btn-primary">Adicionar Livro</button>                
-        </div>    
-    </div>
+    <form action="php_action/create.php" method="POST" name="formulario">
+        
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3">
+                <label> Nome do Livro</label>
+                <input type="text" name="nome_livro" class="form-control " placeholder="Nome do Livro" id="nome_livro">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3">
+                <label for="sel1">Nacionalidade:</label>
+                <select class="form-control" id="nacionalidade">
+                    <option>Brasileira</option>
+                    <option>Inglesa</option>
+                    <option>Francesa</option>
+                    <option>Russa</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+        <div class="col-md-6 offset-md-3">
+                <label>Data Criacao:</label>
+                <input type='text' id="ano_criacao" data-date-format="YYYY-MM-DD" name="ano_criacao" class="form-control" />
+            </div>
+        </div>
+
+
+
+        <button type="submit" style="width: 100%" class="btn btn-primary" name="btn-cadastrar">Cadastrar</button>
 </div>
-    <?php
-    include_once('includes/footer.php');
-    ?>
+</form>
+</div>
+
+<?php
+include_once('includes/footer.php');
+?>

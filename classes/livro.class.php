@@ -8,9 +8,8 @@ class livro extends base{
         if(sizeof($field) <= 0 ):
             $this->fields_value = array(
                 "nome_livro" => NULL,
+                 "nacionalidade" => NULL,
                  "ano_criacao" => NULL,
-                 "categoria" => NULL,
-                 "sinopse" => NULL,
             );
         else:
             $this->fields_value = $field;
