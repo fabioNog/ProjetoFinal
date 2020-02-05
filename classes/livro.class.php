@@ -7,14 +7,15 @@ class livro extends base{
         $this->table = "livro";
         if(sizeof($field) <= 0 ):
             $this->fields_value = array(
-                "nome_livro" => NULL,
-                 "nacionalidade" => NULL,
-                 "ano_criacao" => NULL,
+                 "liv_nome" => NULL,
+                 "liv_lingua" => NULL,
+                 "liv_ano" => NULL,
+                 "resumo" => NULL,
             );
         else:
             $this->fields_value = $field;
         endif;
-        $this->field_pk ="id_autor";
+        $this->field_pk ="liv_cod";
     }
 }
 ?>
