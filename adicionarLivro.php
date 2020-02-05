@@ -44,6 +44,11 @@ include_once('includes/header.php');
 <!-- container -->
 <div class="container">
     <form action="php_action/create.php" method="POST">
+    <?php
+        require_once('classes/livro.class.php');
+        require_once('classes/conexao.class.php');
+
+    ?>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
@@ -55,11 +60,11 @@ include_once('includes/header.php');
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label for="nacionalidade">Nacionalidade:</label>
-                <select class="form-control" name="nacionalidade" id="nacionalidade">
-                    <option name="nacionalidade" id="nacionalidade">Brasileira</option>
-                    <option name="nacionalidade" id="nacionalidade" >Inglesa</option>
-                    <option name="nacionalidade" id="nacionalidade">Francesa</option>
-                    <option name="nacionalidade" id="nacionalidade">Russa</option>
+                <select class="form-control" name="nacionalidade" >
+                    <option name="nacionalidade"  value="brasileira">Brasileira</option>
+                    <option name="nacionalidade"  value="francesa" >Inglesa</option>
+                    <option name="nacionalidade"  value="francesa">Francesa</option>
+                    <option name="nacionalidade"  value="russa">Russa</option>
                 </select>
             </div>
         </div>
@@ -67,12 +72,7 @@ include_once('includes/header.php');
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3 col-lg-6">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" name="ano_criacao" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
+                    <input type="datetime-local" name="ano_criacao" id="dateControl" value="30/04/2015">
             </div>
         </div>
         <div class="form-group">
