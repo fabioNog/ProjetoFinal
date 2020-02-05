@@ -44,27 +44,28 @@ include_once('includes/header.php');
 <!-- container -->
 <div class="container">
     <form action="php_action/create.php" method="POST">
-    <?php
+        <?php
         require_once('classes/livro.class.php');
         require_once('classes/conexao.class.php');
 
-    ?>
+        ?>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label for="nome_livro"> Nome do Livro</label>
-                <input type="text" name="nome_livro" id="nome_livro" class="form-control " placeholder="Nome do Livro">
+                <input type="text" name="liv_nome" id="liv_nome" class="form-control " placeholder="Nome do Livro">
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <label for="nacionalidade">Nacionalidade:</label>
-                <select class="form-control" name="nacionalidade" >
-                    <option name="nacionalidade"  value="brasileira">Brasileira</option>
-                    <option name="nacionalidade"  value="francesa" >Inglesa</option>
-                    <option name="nacionalidade"  value="francesa">Francesa</option>
-                    <option name="nacionalidade"  value="russa">Russa</option>
+                <label for="liv_lingua">Nacionalidade:</label>
+                <select class="form-control" name="liv_lingua">
+                    <option id="liv_lingua" name="liv_lingua" value="brasileira">Brasileira</option>
+                    <option id="liv_lingua" name="liv_lingua" value="americana">Americana</option>
+                    <option id="liv_lingua" name="liv_lingua" value="italiana">Italiana</option>
+                    <option id="liv_lingua" name="liv_lingua" value="francesa">Francesa</option>
+                    <option id="liv_lingua" name="liv_lingua" value="francesa">Francesa</option>
                 </select>
             </div>
         </div>
@@ -72,7 +73,7 @@ include_once('includes/header.php');
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3 col-lg-6">
-                    <input type="datetime-local" name="ano_criacao" id="dateControl" value="30/04/2015">
+                <input type="datetime-local" name="liv_ano">
             </div>
         </div>
         <div class="form-group">
