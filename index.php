@@ -47,9 +47,12 @@ require_once('classes/livro.class.php');
         <table class="table">
             <thead>
                 <tr>
+                    <th>Codigo</th>
                     <th>Nome do Livro</th>
                     <th>Nacionalidade</th>
                     <th>Ano de Publicação</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
             <tbody>
@@ -59,11 +62,12 @@ require_once('classes/livro.class.php');
                 while($res = $livro->returnDates()):
                 ?>
                 <tr>
+                    <td><?php echo $res->liv_cod?></td>
                     <td><?php echo $res->liv_nome?></td>                    
                     <td><?php echo $res->liv_lingua?></td>
                     <td><?php echo $res->liv_ano?></td>
-                    <td><button type= "button" class="btn btn-dark">Editar</a></span></button></td>
-                    <td><button type= "button" class="btn btn-dark">Excluir</td>
+                    <td><button type= "button" class="btn btn-warning">Editar</a></span></button></td>
+                    <td><button type= "button" class="btn btn-danger">Excluir</td>
                 </tr>
                 <?php endwhile;?>
             </tbody>

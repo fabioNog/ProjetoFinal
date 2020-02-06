@@ -7,10 +7,11 @@ class livro extends base{
         $this->table = "livro";
         if(sizeof($field) <= 0 ):
             $this->fields_value = array(
+                 "liv_cod" => NULL,
                  "liv_nome" => NULL,
                  "liv_lingua" => NULL,
                  "liv_ano" => NULL,
-                 "resumo" => NULL,
+                 "resumo" => NULL,                 
             );
         else:
             $this->fields_value = $field;

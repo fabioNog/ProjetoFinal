@@ -52,37 +52,44 @@ include_once('includes/header.php');
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <label for="nome_livro"> Nome do Livro</label>
-                <input type="text" name="liv_nome" id="liv_nome" class="form-control " placeholder="Nome do Livro">
+                <label>Insira o codigo do livro</label><br>
+                <input type="number" name="liv_cod" id="liv_cod" min="1" max="100">
             </div>
-        </div>
+        </div>    
 
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label for="liv_lingua">Nacionalidade:</label>
-                <select class="form-control" name="liv_lingua">
-                    <option id="liv_lingua" name="liv_lingua" value="brasileira">Brasileira</option>
-                    <option id="liv_lingua" name="liv_lingua" value="americana">Americana</option>
-                    <option id="liv_lingua" name="liv_lingua" value="italiana">Italiana</option>
-                    <option id="liv_lingua" name="liv_lingua" value="francesa">Francesa</option>
-                    <option id="liv_lingua" name="liv_lingua" value="francesa">Francesa</option>
-                </select>
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label for="nome_livro"> Nome do Livro</label>
+                    <input type="text" name="liv_nome" id="liv_nome" class="form-control " placeholder="Nome do Livro">
+                </div>
             </div>
-        </div>
 
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label for="liv_lingua">Nacionalidade:</label>
+                    <select class="form-control" name="liv_lingua">
+                        <option id="liv_lingua"  value="brasileira">Brasileira</option>
+                        <option id="liv_lingua"  value="americana">Americana</option>
+                        <option id="liv_lingua"  value="italiana">Italiana</option>
+                        <option id="liv_lingua"  value="francesa">Francesa</option>
+                        <option id="liv_lingua"  value="francesa">Francesa</option>
+                    </select>
+                </div>
+            </div>
 
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3 col-lg-6">
-                <input type="datetime-local" name="liv_ano">
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label>Insira a data</label><br>
+                    <input type="datetime-local" name="liv_ano" id="liv_cod" min="1" max="100">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <button type="submit" style="width: 100%" class="btn btn-primary" name="cadastrar" id="cadastrar">Cadastrar</button>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <button type="submit" style="width: 100%" class="btn btn-primary" name="cadastrar" id="cadastrar">Cadastrar</button>
-            </div>
-        </div>
-</div>
-</form>
+    </form>
 </div>
 
 <?php
