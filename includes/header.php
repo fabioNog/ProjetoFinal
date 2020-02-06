@@ -27,7 +27,7 @@
     <title>Livraria</title>
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Livraria SOITIC</a>
+    <a class="navbar-brand" href="index.php">Livraria SOITIC</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,7 +38,10 @@
                 <a class="nav-link" href="index.php">Home<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Autores</a>
+                <a class="nav-link" href="listarAutor.php">Autores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="listarEditora.php">Editoras</a>
             </li>            
         </ul>
     </div>
