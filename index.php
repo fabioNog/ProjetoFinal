@@ -23,6 +23,7 @@ endif;
                     <th>Ano de Publicação</th>
                     <th>Editar</th>
                     <th>Excluir</th>
+                    <th>Info</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,8 +40,9 @@ endif;
                     <td><?php echo $res->liv_nome?></td>                    
                     <td><?php echo $res->liv_lingua?></td>
                     <td><?php echo $res->liv_ano?></td>
-                    <td><button type= "button" class="btn btn-warning"><a href="components/editarLivro.php?liv_cod=<?php echo $res->liv_cod;?>">Editar</a></span></button></td>
+                    <td><a href="components/editarLivro.php?liv_cod=<?php echo $res->liv_cod;?>"><button type= "button" class="btn btn-dark">Editar</span></button></a></td>
                     <td><button type= "button" class="btn btn-danger">Excluir</td>
+                    <td><button type= "button" class="btn btn-warning">info</td>
                 </tr>
                 <?php endwhile;?>
             </tbody>

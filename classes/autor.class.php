@@ -4,7 +4,7 @@ class autor extends base{
     public function __construct($field=array())
     {
         parent::__construct();
-        $this->table = "livro";
+        $this->table = "autor";
         if(sizeof($field) <= 0 ):
             $this->fields_value = array(
                 "aut_nome" => NULL,
