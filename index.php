@@ -60,6 +60,9 @@ require_once('classes/livro.class.php');
                 $livro = new livro();
                 $livro->selectAll($livro);
                 while($res = $livro->returnDates()):
+                   if($res->liv_ano):
+                    $res->liv_ano = date("d/m/Y", strtotime($res->liv_ano));
+                   endif;
                 ?>
                 <tr>
                     <td><?php echo $res->liv_cod?></td>
