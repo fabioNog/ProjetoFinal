@@ -33,7 +33,7 @@ include_once('includes/header.php');
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label>Insira a data de nascimento</label><br>
-                    <input type="datetime-local" step="59" name="aut_data_nasc" min="1" style="width: 100%">
+                    <input type="datetime-local" step="1" name="aut_data_nasc" min="1" style="width: 100%">
                 </div>
             </div>
 
@@ -46,7 +46,7 @@ include_once('includes/header.php');
                             $livro->selectAll($livro);
                             while($res = $livro->returnDates()):
                         ?>
-                        <option id="liv_cod"  value=<?php $res->liv_cod?>><?php echo $res->liv_cod?></option>
+                        <option id="liv_cod" name="liv_cod"  value="<?php $res->liv_cod?>"><?php echo $res->liv_cod?></option>
                         <?php endwhile;?>
                         </select>                    
                 </div>
