@@ -1,0 +1,65 @@
+CREATE TABLE `livro_autor` (
+  `lva_cod` int(10) NOT NULL AUTO_INCREMENT,
+  `aut_cod` int(10) NOT NULL,
+  `liv_cod` int(10) NOT NULL,
+  PRIMARY KEY (`lva_cod`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `autor` (
+  `aut_cod` int(10) NOT NULL,
+  `aut_nome` varchar(50) NOT NULL,
+  `aut_data_nasc` int(10) NOT NULL,
+  PRIMARY KEY (`aut_cod`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `livro` (
+  `liv_cod` int(10) NOT NULL,
+  `liv_nome` varchar(50) NOT NULL,
+  `liv_lingua` varchar(50) NOT NULL,
+  `liv_ano` datetime NOT NULL,
+  `resumo` varchar(100),
+  PRIMARY KEY (`liv_cod`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `edicao` (
+  `edit_isnb` int(10) NOT NULL,
+  `edit_qtd` int(10) NOT NULL,
+  `edit_pag` int(10) NOT NULL,
+  `edit_ano` datetime NOT NULL,
+  `liv_ano` int(10) NOT NULL,
+  `edit_cod` int(10) NOT NULL,
+  PRIMARY KEY (`edit_isnb`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `editora` (
+  `edi_cod` int(10) NOT NULL,
+  `edi_nome` varchar(50) NOT NULL,
+  `edi_rua` varchar(50) NOT NULL,
+  `edi_bairro` varchar(50) NOT NULL,
+  `edi_cidade` varchar(50) NOT NULL,
+  PRIMARY KEY (`edi_cod`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `fone` (
+  `edf_cod` int(10) NOT NULL,
+  `editora_cod` int(10) NOT NULL,
+  `edf_fone` varchar(50) NOT NULL,
+  PRIMARY KEY (`edf_cod`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+alter table livro_autor
+add foreing key (lva_cod)
+references liv_cod;
+
+alter table livro_autor
+add foreing key (lva_cod)
+references aut_cod;
+
+alter table edicao
+add foreing key (edit_isnb)
+references liv_cod;
+
+alter table fone
+add foreing key (edf_cod`)
+references edi_cod;
+
