@@ -46,7 +46,7 @@ include_once('includes/header.php');
                             $livro->selectAll($livro);
                             while($res = $livro->returnDates()):
                         ?>
-                        <option id="liv_cod" name="liv_cod"  value="<?php $res->liv_cod?>"><?php echo $res->liv_cod?></option>
+                        <option type="number" id="liv_cod" value="<?php $res->liv_cod?>"><?php echo $res->liv_cod?></option>
                         <?php endwhile;?>
                         </select>                    
                 </div>
