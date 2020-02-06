@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once('../classes/livro.class.php');
     require_once('../classes/conexao.class.php');
 
@@ -20,9 +21,11 @@
         echo $sql;
         echo '</pre>';
         if(mysqli_query($con->conection,$sql)):
-            header('Location: ../index.php?sucesso');
+            $_SESSION['mensagem'] = 'Cadastrado com Sucesso';
+            header('Location: ../index.php?');
         else:
-            header('Location: ../index.php?erro');
+            $_SESSION['mensagem'] = 'Cadastrado com Sucesso';
+            header('Location: ../index.php?');
         endif;
 
     endif;
