@@ -24,7 +24,7 @@
 </ul>
 
 <h4>MySQL</h4>
-
+![MySQL](https://user-images.githubusercontent.com/23178982/73975578-6405fe80-4905-11ea-981a-b4e97054ca63.png)
 
 <p>O MySQL é um sistema gerenciador de banco de dados relacional de código aberto usado na maioria das aplicações gratuitas para gerir suas bases de dados. O serviço utiliza a linguagem SQL (Structure Query Language – Linguagem de Consulta Estruturada), que é a linguagem mais popular para inserir, acessar e gerenciar o conteúdo armazenado num banco de dados.<p> <br/>
 <p>O sistema foi desenvolvido pela empresa sueca MySQL AB e publicado, originalmente, em maio de 1995. Após, a empresa foi comprada pela Sun Microsystems e, em janeiro de 2010, integrou a transação bilionária da compra da Sun pela Oracle Corporation. Atualmente, a Oracle, embora tenha mantido a versão para a comunidade, tornou seu uso mais restrito e os desenvolvedores criaram, então, o projeto MariaDB para continuar desenvolvendo o código da versão 5.1 do MySQL, de forma totalmente aberta e gratuita. O MariaDB pretende manter compatibilidade com as versões lançadas pela Oracle.</p>
