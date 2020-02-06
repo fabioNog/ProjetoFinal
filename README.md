@@ -7,6 +7,9 @@
 <h3>Projeto - Ferramentas</h3>
 <strong>Para realizar este Projeto foi nescessário as seguintes ferramentas</strong>
 <ul>
-<li></li>
-<li></li>
+<li>Banco de Dados Mysql</li>
+<li>Linguagem Orientada a Objetos PHP</li>
+<li>HTML5</li>
+<li>CSS</li>
+<li>XAMPP</li>
 </ul>
