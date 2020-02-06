@@ -8,7 +8,7 @@ class autor extends base{
         if(sizeof($field) <= 0 ):
             $this->fields_value = array(
                 "aut_nome" => NULL,
-                 "aut_dat_nasc" => NULL,
+                 "aut_data_nasc" => NULL,
             );
         else:
             $this->fields_value = $field;
