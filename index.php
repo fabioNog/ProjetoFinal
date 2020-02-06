@@ -1,7 +1,16 @@
 <?php
-include_once('includes/header.php');
+include_once('includes/header.php'); 
 require_once('classes/livro.class.php');
 ?>
+
+<?php
+session_start();
+if(isset($_SESSION['mensagem'])): 
+    echo $_SESSION['mensagem'];
+endif;
+
+?>
+
 <!-- container -->
 <div class="container">
     <div class="row">
@@ -30,7 +39,7 @@ require_once('classes/livro.class.php');
                     <td><?php echo $res->liv_nome?></td>                    
                     <td><?php echo $res->liv_lingua?></td>
                     <td><?php echo $res->liv_ano?></td>
-                    <td><button type= "button" class="btn btn-warning">Editar</a></span></button></td>
+                    <td><button type= "button" class="btn btn-warning"><a href="components/editarLivro.php?liv_cod=<?php echo $res->liv_cod;?>">Editar</a></span></button></td>
                     <td><button type= "button" class="btn btn-danger">Excluir</td>
                 </tr>
                 <?php endwhile;?>
@@ -38,7 +47,11 @@ require_once('classes/livro.class.php');
         </table>
         <br>
 
-        <a href="adicionarLivro.php"><button type="button" class="btn btn-primary">Adicionar Livro</button></a>
+        <a href="adicionarLivro.php">
+            <button type="button" class="btn btn-primary" onclick="">
+                Adicionar Livro
+            </button>
+        </a>
     </div>
 </div>
     <?php
