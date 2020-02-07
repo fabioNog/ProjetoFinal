@@ -16,7 +16,7 @@ include_once('includes/header.php');
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label>Insira o codigo do livro</label><br>
-                <input type="number" name="liv_cod" id="liv_cod" min="1" max="10000" style="width: 100%">
+                <input type="number" name="liv_cod" id="liv_cod" min="1" style="width: 100%">
             </div>
         </div>    
 
@@ -35,8 +35,8 @@ include_once('includes/header.php');
                         <option id="liv_lingua"  value="americana">Americana</option>
                         <option id="liv_lingua"  value="italiana">Italiana</option>
                         <option id="liv_lingua"  value="francesa">Francesa</option>
-                        <option id="liv_lingua"  value="francesa">Japonesa</option>
-                        <option id="liv_lingua"  value="francesa">Inglesa</option>
+                        <option id="liv_lingua"  value="japonesa">Japonesa</option>
+                        <option id="liv_lingua"  value="inglesa">Inglesa</option>
                     </select>
                 </div>
             </div>

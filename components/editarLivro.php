@@ -17,18 +17,17 @@ require_once('../classes/conexao.class.php');
         <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label>Insira os codigo do livro</label>                    
-                    <select class="form-control" name="liv_cod">
                         <?php
                             $livro = new livro;
                             if(isset($_GET['liv_cod'])):
                                 $liv_cod = $_GET['liv_cod'];    
                             endif;
-                            $livro->selectAll($livro);
+                            $livro->extra_select = "where liv_cod = ".$liv_cod;
+                            $livro->selectAll($livro);                            
                             while($res = $livro->returnDates()):
                         ?>
-                        <option type="number" id="liv_cod" value="<?php $res->liv_cod?>"><?php echo $res->liv_cod?></option>
-                        <?php endwhile;?>
-                        </select>                    
+                        <input type="number" value="<?php echo $res->liv_cod?>" name="liv_cod" id="liv_cod" min="1" style="width: 100%">
+                        <?php endwhile;?>                    
                 </div>
             </div>   
 
