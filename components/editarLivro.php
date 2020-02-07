@@ -14,26 +14,10 @@ require_once('../classes/conexao.class.php');
                     <h1> Editando Livro</h1>
                 </div>
         </div>
-        <div class="form-group">
-                <div class="col-md-6 offset-md-3">
-                    <label>Insira os codigo do livro</label>                    
-                        <?php
-                            $livro = new livro;
-                            if(isset($_GET['liv_cod'])):
-                                $liv_cod = $_GET['liv_cod'];    
-                            endif;
-                            $livro->extra_select = "where liv_cod = ".$liv_cod;
-                            $livro->selectAll($livro);                            
-                            while($res = $livro->returnDates()):
-                        ?>
-                        <input type="number" value="<?php echo $res->liv_cod?>" name="liv_cod" id="liv_cod" min="1" style="width: 100%">
-                        <?php endwhile;?>                    
-                </div>
-            </div>   
-
+   
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label for="nome_livro"> Nome do Livro</label>
+                    <label for="nome_livro"> Altere se nescessitar o nome do Livro</label>
                     <?php
                             $livro = new livro;
                             if(isset($_GET['liv_cod'])):
@@ -91,7 +75,7 @@ require_once('../classes/conexao.class.php');
             </div>
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <button type="submit" style="width: 100%" class="btn btn-primary" name="cadastrar" id="cadastrar">Cadastrar</button>
+                    <button type="submit" style="width: 100%" class="btn btn-primary" name="atualizar"  >Atualizar</button>
                 </div>
             </div>
         </div>
