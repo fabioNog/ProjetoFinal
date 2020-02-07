@@ -51,7 +51,8 @@ require_once('../classes/conexao.class.php');
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label for="liv_lingua">Nacionalidade:</label>
+                    <label for="liv_lingua">Nacionalidade:</label>                    
+                    <select class="form-control" name="liv_lingua">                    
                     <?php
                             $livro = new livro;
                             if(isset($_GET['liv_cod'])):
@@ -59,16 +60,15 @@ require_once('../classes/conexao.class.php');
                             endif;
                             $livro->extra_select = "where liv_cod = ".$liv_cod;
                             $livro->selectAll($livro);
-                            while($res = $livro->returnDates()):
-                    ?>
-                    <select class="form-control" name="liv_lingua" value="<?php echo $res->liv_lingua?>">
+                            while($res = $livro->returnDates()):                                
+                    ?>                        
+                        <option id="liv_lingua"  value="brasileira" <?=($res->liv_lingua == 'brasileira') ? 'selected' : ''?>>Brasileira</option>
+                        <option id="liv_lingua"  value="americana" <?=($res->liv_lingua == 'americana') ? 'selected' : ''?>>Americana</option>
+                        <option id="liv_lingua"  value="italiana" <?=($res->liv_lingua == 'italiana') ? 'selected' : ''?>>Italiana</option>
+                        <option id="liv_lingua"  value="francesa" <?=($res->liv_lingua == 'francesa') ? 'selected' : ''?>>Francesa</option>
+                        <option id="liv_lingua"  value="japonesa" <?=($res->liv_lingua == 'japonesa') ? 'selected' : ''?>>Japonesa</option>
+                        <option id="liv_lingua"  value="inglesa" <?=($res->liv_lingua == 'inglesa') ? 'selected' : ''?>>Inglesa</option>
                     <?php endwhile;?>
-                        <option id="liv_lingua"  value="brasileira">Brasileira</option>
-                        <option id="liv_lingua"  value="americana">Americana</option>
-                        <option id="liv_lingua"  value="italiana">Italiana</option>
-                        <option id="liv_lingua"  value="francesa">Francesa</option>
-                        <option id="liv_lingua"  value="francesa">Japonesa</option>
-                        <option id="liv_lingua"  value="francesa">Inglesa</option>
                     </select>
                 </div>
             </div>
@@ -85,7 +85,8 @@ require_once('../classes/conexao.class.php');
                             $livro->selectAll($livro);
                             while($res = $livro->returnDates()):
                     ?>
-                    <input type="datetime-local" step="59" name="liv_ano" id="liv_ano" min="1" style="width: 100%" value="<?php $res->liv_ano?>">
+                    <input type="datetime-local" step="59" name="liv_ano" id="liv_ano" min="1" style="width: 100%" 
+                    ="<?php $res->liv_ano?>">
                     <?php endwhile;?>
                 </div>
             </div>

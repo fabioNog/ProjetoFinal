@@ -4,7 +4,7 @@
   
  <h2>Projeto</h2>
 <ol>
-<li>Ferramentas Utilizadas/li>
+<li>Ferramentas Utilizadas</li>
 <li>Como utiliza-lo</li>
 <li>Referências</li>
 <li>Resultados</li>
