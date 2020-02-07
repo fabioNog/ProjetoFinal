@@ -1,42 +1,74 @@
 <?php
 include_once('../includes/headerComponents.php');
-include_once('../classes/livro.class.php');
-$livro = new livro();
+require_once('../classes/livro.class.php');
+require_once('../classes/conexao.class.php');
 ?>
 <br>
 <br>
 <!-- container -->
 <div class="container">
-    <form action="php_action/create.php" method="POST">
-        <?php
-        require_once('../classes/livro.class.php');
-        require_once('../classes/conexao.class.php');
-
-        ?>
-
+    <form action="php_action/editLivro.php" method="POST">
+        
         <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label>Insira o codigo do livro</label><br>
-                <input type="number" name="liv_cod" id="liv_cod" min="1" max="10000" style="width: 100%">
-            </div>
-        </div>    
+                <div class="col-md-6 offset-md-3">    
+                    <h1> Editando Livro</h1>
+                </div>
+        </div>
+        <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <label>Insira os codigo do livro</label>                    
+                    <select class="form-control" name="liv_cod">
+                        <?php
+                            $livro = new livro;
+                            if(isset($_GET['liv_cod'])):
+                                $liv_cod = $_GET['liv_cod'];    
+                            endif;
+                            $livro->selectAll($livro);
+                            while($res = $livro->returnDates()):
+                        ?>
+                        <option type="number" id="liv_cod" value="<?php $res->liv_cod?>"><?php echo $res->liv_cod?></option>
+                        <?php endwhile;?>
+                        </select>                    
+                </div>
+            </div>   
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label for="nome_livro"> Nome do Livro</label>
-                    <input type="text" name="liv_nome" id="liv_nome" class="form-control " placeholder="Nome do Livro">
+                    <?php
+                            $livro = new livro;
+                            if(isset($_GET['liv_cod'])):
+                                $liv_cod = $_GET['liv_cod'];    
+                            endif;
+                            $livro->extra_select = "where liv_cod = ".$liv_cod;
+                            $livro->selectAll($livro);
+                            while($res = $livro->returnDates()):
+                    ?>
+                    <input type="text" value="<?php echo $res->liv_nome ?>" name="liv_nome" id="liv_nome" class="form-control " placeholder="Nome do Livro">
+                    <?php endwhile;?>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label for="liv_lingua">Nacionalidade:</label>
-                    <select class="form-control" name="liv_lingua">
+                    <?php
+                            $livro = new livro;
+                            if(isset($_GET['liv_cod'])):
+                                $liv_cod = $_GET['liv_cod'];    
+                            endif;
+                            $livro->extra_select = "where liv_cod = ".$liv_cod;
+                            $livro->selectAll($livro);
+                            while($res = $livro->returnDates()):
+                    ?>
+                    <select class="form-control" name="liv_lingua" value="<?php echo $res->liv_lingua?>">
+                    <?php endwhile;?>
                         <option id="liv_lingua"  value="brasileira">Brasileira</option>
                         <option id="liv_lingua"  value="americana">Americana</option>
                         <option id="liv_lingua"  value="italiana">Italiana</option>
                         <option id="liv_lingua"  value="francesa">Francesa</option>
-                        <option id="liv_lingua"  value="francesa">Francesa</option>
+                        <option id="liv_lingua"  value="francesa">Japonesa</option>
+                        <option id="liv_lingua"  value="francesa">Inglesa</option>
                     </select>
                 </div>
             </div>
@@ -44,7 +76,17 @@ $livro = new livro();
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label>Insira a data</label><br>
-                    <input type="datetime-local" step="59" name="liv_ano" id="liv_ano" min="1" style="width: 100%">
+                    <?php
+                            $livro = new livro;
+                            if(isset($_GET['liv_cod'])):
+                                $liv_cod = $_GET['liv_cod'];    
+                            endif;
+                            $livro->extra_select = "where liv_cod = ".$liv_cod;
+                            $livro->selectAll($livro);
+                            while($res = $livro->returnDates()):
+                    ?>
+                    <input type="datetime-local" step="59" name="liv_ano" id="liv_ano" min="1" style="width: 100%" value="<?php $res->liv_ano?>">
+                    <?php endwhile;?>
                 </div>
             </div>
             <div class="form-group">
