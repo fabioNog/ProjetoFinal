@@ -67,8 +67,8 @@ npm clone https://github.com/fabioNog/ProjetoFinal.git
 
 Antes de utilizar o comando acima npm é nescessário ter feito a instalação do XAMPP <a hrfe="https://www.apachefriends.org/pt_br/index.html"></a>
 
-Após instalar utilizei a bash do git para navegar até a pasta htdocs do xampp, e lá desenvolvi todo meu projeto.
-Instalei também o Mysql Workbench para as riações de todas as tabelas, neste projeto, contém um arquivo sqt.txt ao qual é nescessário, para ser utilizado e também utilizei o workbench para a criação do meu diagrama ER. Neste diretório se encontra os SQLS nescessários para o desenvolvimento.
+ Utilize a bash do git ou o terminal para navegar até o diretório  htdocs do xampp e lá clone execute o comando.
+Instalei também o Mysql Workbench para as criações de todas as tabelas, neste projeto, contém um arquivo sql.txt ao qual é nescessário ser executado os camandos para que o projeto funcione adequadamente,também utilizei o workbench para a criação do meu diagrama ER.
 
 <h3>Referências<h4>
 https://www.apachefriends.org/pt_br/index.html
