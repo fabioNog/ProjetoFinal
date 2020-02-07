@@ -3,7 +3,6 @@ include_once('../includes/headerComponents.php');
 ?>
 <br>
 <br>
-<br>
 <!-- container -->
 <div class="container">
     <form action="php_action/create.php" method="POST">
