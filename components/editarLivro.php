@@ -1,5 +1,6 @@
 <?php
 include_once('../includes/headerComponents.php');
+include_once('../classes/livro.class.php');
 ?>
 <br>
 <br>
