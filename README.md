@@ -71,10 +71,9 @@ Após instalar utilizei a bash do git para navegar até a pasta htdocs do xampp,
 Instalei também o Mysql Workbench para as interfaces e também para a criação do meu ER. Neste diretório se encontra os SQLS nescessários para o desenvolvimento.
 
 <h3>Referências<h4>
-  <ul>
-  <li><a hrfe="https://www.apachefriends.org/pt_br/index.html"></a></li>
-  <li><a hrfe="https://dev.mysql.com/doc/"></a></li>    
-  <li><a hrfe="https://www.php.net/docs.php"></a></li>
-   <li><a hrfe="http://dev.rbtech.info"></a></li>
+https://www.apachefriends.org/pt_br/index.html
+https://dev.mysql.com/doc/
+https://www.php.net/docs.php"
+http://dev.rbtech.info
   </ul>
 
