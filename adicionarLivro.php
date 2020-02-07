@@ -31,11 +31,12 @@ include_once('includes/header.php');
                 <div class="col-md-6 offset-md-3">
                     <label for="liv_lingua">Nacionalidade:</label>
                     <select class="form-control" name="liv_lingua">
-                        <option id="liv_lingua"  value="brasileira">Brasileira</option>
+                    <option id="liv_lingua"  value="brasileira">Brasileira</option>
                         <option id="liv_lingua"  value="americana">Americana</option>
                         <option id="liv_lingua"  value="italiana">Italiana</option>
                         <option id="liv_lingua"  value="francesa">Francesa</option>
-                        <option id="liv_lingua"  value="francesa">Francesa</option>
+                        <option id="liv_lingua"  value="francesa">Japonesa</option>
+                        <option id="liv_lingua"  value="francesa">Inglesa</option>
                     </select>
                 </div>
             </div>
