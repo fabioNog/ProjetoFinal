@@ -48,18 +48,18 @@ CREATE TABLE `fone` (
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 alter table livro_autor
-add foreing key (lva_cod)
-references liv_cod;
+add FOREIGN KEY (lva_cod)
+REFERENCES livro (liv_cod);
 
 alter table livro_autor
-add foreing key (lva_cod)
-references aut_cod;
+add FOREIGN KEY (lva_cod)
+REFERENCES  autor(aut_cod);
 
 alter table edicao
-add foreing key (edit_isnb)
-references liv_cod;
+add FOREIGN KEY (edit_isnb)
+REFERENCES  livro (liv_cod);
 
 alter table fone
-add foreing key (edf_cod`)
-references edi_cod;
+add FOREIGN KEY (edf_cod`)
+REFERENCES  editora(edi_cod);
 
