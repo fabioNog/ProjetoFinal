@@ -60,16 +60,18 @@ require_once('../classes/conexao.class.php');
                 <div class="col-md-6 offset-md-3">
                     <label>Insira a data</label><br>
                     <?php
+                            require_once('../classes/conexao.class.php');
                             $livro = new livro;
+                            $con = new conexao();
                             if(isset($_GET['liv_cod'])):
                                 $liv_cod = $_GET['liv_cod'];    
                             endif;
                             $livro->extra_select = "where liv_cod = ".$liv_cod;
                             $livro->selectAll($livro);
                             while($res = $livro->returnDates()):
+                                $liv_anoTeste = date('Y-m-d\TH:i:s',strtotime($res->liv_ano));
                     ?>
-                    <input type="datetime-local" step="59" name="liv_ano" id="liv_ano" min="1" style="width: 100%" 
-                    ="<?php $res->liv_ano?>">
+                    <input type="datetime-local" value="<?php $liv_anoTeste?>" step="59" name="liv_ano"  style="width: 100%">
                     <?php endwhile;?>
                 </div>
             </div>
