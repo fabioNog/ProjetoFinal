@@ -62,6 +62,6 @@ add FOREIGN KEY (edit_isnb)
 REFERENCES  livro (liv_cod);
 
 alter table fone
-add FOREIGN KEY (edf_cod`)
+add FOREIGN KEY (edf_cod)
 REFERENCES  editora(edi_cod);
 
