@@ -1,3 +1,5 @@
+create database livraria;
+
 CREATE TABLE `livro_autor` (
   `lva_cod` int(10) NOT NULL AUTO_INCREMENT,
   `aut_cod` int(10) NOT NULL,
