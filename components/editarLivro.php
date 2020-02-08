@@ -7,7 +7,7 @@ require_once('../classes/conexao.class.php');
 <br>
 <!-- container -->
 <div class="container">
-    <form action="php_action/editLivro.php" method="POST">
+    <form action="../php_action/editLivro.php" method="POST">
         
         <div class="form-group">
                 <div class="col-md-6 offset-md-3">    
@@ -71,13 +71,13 @@ require_once('../classes/conexao.class.php');
                             while($res = $livro->returnDates()):
                                 $liv_anoTeste = date('Y-m-d\TH:i:s',strtotime($res->liv_ano));
                     ?>
-                    <input type="datetime-local" value="<?php $liv_anoTeste?>" step="59" name="liv_ano"  style="width: 100%">
+                    <input type="datetime-local" value="<?php echo $liv_anoTeste ?>" step="59" name="liv_ano"  style="width: 100%">
                     <?php endwhile;?>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <button type="submit" style="width: 100%" class="btn btn-primary" name="atualizar"  >Atualizar</button>
+                    <button type="submit" style="width: 100%" class="btn btn-primary" name="atualizar">Atualizar</button>
                 </div>
             </div>
         </div>
