@@ -8,7 +8,7 @@ require_once('../classes/conexao.class.php');
 
 <div class="container" style="margin-top:5%">
     <div class="row">
-        <div class="card text-white bg-danger col-sm-6 col-lg-6 offset-lg-4 offset-md-8 .offset-sm-6 offset-1" style="max-width: 18rem;">
+        <div class="card text-white bg-danger col-sm-6 col-lg-6 offset-lg-4 offset-md-2 .offset-sm-6 offset-1" style="max-width: 18rem;">
             <div class="card-header">Você esta presta a deletar</div>
             <div class="card-body">
             <?php
@@ -20,7 +20,7 @@ require_once('../classes/conexao.class.php');
                 $livro->selectAll($livro);
                 while($res = $livro->returnDates()):                
             ?>
-                <h5 class="card-title" style="margin-left: 70px"><?php echo $res->liv_nome?></h5>
+                <h5 class="card-title"><?php echo $res->liv_nome?></h5>
             <?php
                 endwhile;
             ?>                            
@@ -31,8 +31,9 @@ require_once('../classes/conexao.class.php');
 <br>
 <div class="container">
     <div class="row">
-        <button type="submit"  class="btn btn-danger col-lg-2 offset-lg-4 col-md-2 col-sm-3 " name="atualizar">Excluir</button>
-        <button type="submit"  class="btn btn-primary col-lg-2 offset-lg-3 col-md-2 col-sm-3 offset-md-1" style="margin-left: 10px" name="atualizar">Voltar</button>
+        <button type="submit"  class="btn btn-danger col-lg-2 offset-lg-4  col-sm-2 col-3 offset-2" name="atualizar">Excluir</button>
+        <br/>
+        <button type="submit"  class="btn btn-primary col-lg-2 offset-lg-0  col-sm-2 col-3 offset-1"  name="atualizar">Voltar</button>
     </div>
 </div>
 <?php
