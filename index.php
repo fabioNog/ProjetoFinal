@@ -40,8 +40,8 @@ endif;
                     <td><?php echo $res->liv_nome?></td>                    
                     <td><?php echo $res->liv_lingua?></td>
                     <td><?php echo $res->liv_ano?></td>
-                    <td><a href="components/editarLivro.php?liv_cod=<?php echo $res->liv_cod;?>"><button type= "button" class="btn btn-dark">Editar</span></button></a></td>
-                    <td><button type= "button" class="btn btn-danger">Excluir</td>
+                    <td><a href="components/editarLivro.php?liv_cod=<?php echo $res->liv_cod;?>"><button type= "button" class="btn btn-dark">Editar</button></a></td>
+                    <td><a href="components/excluirLivro.php?liv_cod=<?php echo $res->liv_cod;?>"><button type= "button" class="btn btn-danger">Excluir</button></a></td>
                     <td><button type= "button" class="btn btn-warning">info</td>
                 </tr>
                 <?php endwhile;?>

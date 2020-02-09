@@ -34,7 +34,7 @@ require_once('../classes/conexao.class.php');
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label for="liv_lingua">Nacionalidade:</label>                    
+                    <label for="liv_lingua">Altere se nescessitar a nacionalidade</label>                    
                     <select class="form-control" name="liv_lingua">                    
                     <?php
                             $livro = new livro;
@@ -58,7 +58,7 @@ require_once('../classes/conexao.class.php');
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <label>Insira a data</label><br>
+                    <label>Altere se nescessitar a data</label><br>
                     <?php
                             require_once('../classes/conexao.class.php');
                             $livro = new livro;
