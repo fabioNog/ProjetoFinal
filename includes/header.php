@@ -24,9 +24,9 @@
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/Home.css">
-    <title>Livraria</title>
+    <title>Livraria SOITIC</title>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.php">Livraria SOITIC</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
