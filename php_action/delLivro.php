@@ -8,21 +8,15 @@
    
     if(isset($_POST['deletar'])):
         $liv_cod = $_POST['liv_cod'];
-        echo $liv_cod;
+    endif;
+        $livro->setValue('liv_cod',$liv_cod);        
+        $sql = 'DELETE FROM livro
+        WHERE liv_cod ='. $liv_cod;
 
-        $liv_nome = mysqli_escape_string($con->conection ,$_POST['liv_nome']);
-
-        
-        $sql = $livro->update($livro);
-
-
-        /*if(mysqli_query($con->conection,$sql)):
-            $_SESSION['mensagem'] = 'Cadastrado com Sucesso';
+        if(mysqli_query($con->conection,$sql)):            
             header('Location: ../index.php?');
         else:
-            $_SESSION['mensagem'] = 'Cadastrado com Sucesso';
             header('Location: ../index.php?');
-        endif;*/
-
-    endif;
+        endif;
+    
 ?>

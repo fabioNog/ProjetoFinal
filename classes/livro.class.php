@@ -16,7 +16,7 @@ class livro extends base{
         else:
             $this->fields_value = $field;
         endif;
-        $this->field_pk ="liv_cod";
+        $this->field_pk = "liv_cod";
     }
 }
 ?>

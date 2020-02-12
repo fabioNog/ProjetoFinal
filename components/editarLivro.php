@@ -8,7 +8,17 @@ require_once('../classes/conexao.class.php');
 <!-- container -->
 <div class="container">
     <form action="../php_action/editLivro.php" method="POST">
-        
+    <?php
+        $livro = new livro;
+        if(isset($_GET['liv_cod'])):
+            $liv_cod = $_GET['liv_cod'];    
+    ?>
+    <input type="text" 
+        name= "liv_cod"
+        value="<?php echo $liv_cod?>" 
+        style="display: none"
+    >
+    <?php endif;?>
         <div class="form-group">
                 <div class="col-md-6 offset-md-3">    
                     <h1> Editando Livro</h1>

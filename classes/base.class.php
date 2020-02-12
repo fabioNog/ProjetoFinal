@@ -6,9 +6,10 @@ abstract class base extends banco{
     public $fields_value =  array();
     //Chave Primaria
     public $field_pk = NULL;
+    public $value_pk = NULL;
     //Chave Estrangeira
     public $field_fk = NULL;
-    public $value_pk = NULL;
+    public $value_fk = NULL;
     
     public $extra_select = "";//Caso eu nescessite de manipular algum order by, inner join etc..
 

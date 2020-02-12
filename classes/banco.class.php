@@ -62,28 +62,34 @@
 
         //Construindo a função SQL Update
         public function update($object){
-            $sql = "UPDATE ".$object->table." SET ";
+            print_r($object);
+            
+            $sql = "UPDATE ".$object->table." SET ";            
             for($i=0;$i<count($object->fields_value); $i++) :
                 $sql .= key($object->fields_value)."=";
                 $sql .= is_numeric($object->fields_value[key($object->fields_value)]) ? 
                 $object->fields_value[key($object->fields_value)] :
                 "'".$object->fields_value[key($object->fields_value)]."'";
                 if($i < (count($object->fields_value) - 1)):
-                    $sql .= ",";
+                    $sql .= ", ";
                 else:
                     $sql .= " ";
                 endif;
                 next($object->fields_value);
             endfor;
             $sql .= "WHERE ".$object->field_pk."=";
+            
             $sql .= is_numeric($object->value_pk) ? $object->value_pk : "'".$object->value_pk."'";
+
+            echo $sql;
+            
             return $this->executeSQL($sql);
         }//Update
 
         //Construindo a função SQL Delete
         public function delete($object){
             $sql = "DELETE FROM ".$object->table;
-            $sql .= " WHERE ".$object->field_pk."=";
+            $sql .= " WHERE ".$object->field_pk." = ";
             $sql .= is_numeric($object->value_pk) ? $object->value_pk : "'".$object->value_pk."'";
             return $this->executeSQL($sql);            
         }//Delete
