@@ -8,8 +8,12 @@ require_once('classes/autor.class.php');
         <table class="table">
             <thead>
                 <tr>
-                    <th>Nome do Autor</th>
-                    <th>Data de Nascimento</th>
+                    <th>Codigo </th>
+                    <th>Nome </th>
+                    <th>Nascimento</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                    <th>Info</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,8 +29,9 @@ require_once('classes/autor.class.php');
                     <td><?php echo $res->aut_cod?></td>
                     <td><?php echo $res->aut_nome?></td>                    
                     <td><?php echo $res->aut_data_nasc?></td>
-                    <td><button type= "button" class="btn btn-warning">Editar</a></span></button></td>
-                    <td><button type= "button" class="btn btn-danger">Excluir</td>
+                    <td><a href="components/editarAutor.php?aut_cod=<?php echo $res->aut_cod;?>"><button type= "button" class="btn btn-dark">Editar</button></a></td>
+                    <td><a href="components/excluirAutor.php?aut_cod=<?php echo $res->aut_cod;?>"><button type= "button" class="btn btn-danger">Excluir</button></a></td>
+                    <td><button type= "button" class="btn btn-warning">info</td>
                 </tr>
                 <?php endwhile;?>
             </tbody>

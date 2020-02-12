@@ -7,6 +7,7 @@ class autor extends base{
         $this->table = "autor";
         if(sizeof($field) <= 0 ):
             $this->fields_value = array(
+                "aut_cod" => NULL,
                 "aut_nome" => NULL,
                  "aut_data_nasc" => NULL,
             );
